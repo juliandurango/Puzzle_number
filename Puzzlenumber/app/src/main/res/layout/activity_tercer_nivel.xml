@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SegundoNivel">
+    tools:context=".TercerNivel">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,11 +38,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
         android:onClick="clickear">
 
         <Button
             android:id="@+id/btnUno"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyle3"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:onClick="clickear"
@@ -51,7 +52,7 @@
 
         <Button
             android:id="@+id/btnDos"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyle3"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/btnUno"
             android:onClick="clickear"
@@ -60,7 +61,7 @@
 
         <Button
             android:id="@+id/btnTres"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyle3"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/btnDos"
             android:onClick="clickear"
@@ -69,7 +70,7 @@
 
         <Button
             android:id="@+id/btnCuatro"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyle3"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/btnTres"
             android:onClick="clickear"
@@ -78,112 +79,193 @@
 
         <Button
             android:id="@+id/btnCinco"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnUno"
-            android:layout_alignParentStart="true"
+            style="@style/ButtonStyle3"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnCuatro"
             android:onClick="clickear"
-            android:tag="10"
+            android:tag="04"
             android:text="5" />
 
         <Button
             android:id="@+id/btnSeis"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyle3"
             android:layout_below="@+id/btnUno"
-            android:layout_toEndOf="@+id/btnUno"
+            android:layout_alignParentStart="true"
             android:onClick="clickear"
-            android:tag="11"
+            android:tag="10"
             android:text="6" />
 
         <Button
             android:id="@+id/btnSiete"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyle3"
             android:layout_below="@+id/btnUno"
-            android:layout_toEndOf="@+id/btnDos"
+            android:layout_toEndOf="@+id/btnUno"
             android:onClick="clickear"
-            android:tag="12"
+            android:tag="11"
             android:text="7" />
 
         <Button
             android:id="@+id/btnOcho"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyle3"
             android:layout_below="@+id/btnUno"
-            android:layout_toEndOf="@+id/btnTres"
+            android:layout_toEndOf="@+id/btnDos"
             android:onClick="clickear"
-            android:tag="13"
+            android:tag="12"
             android:text="8" />
 
         <Button
             android:id="@+id/btnNueve"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnCinco"
-            android:layout_alignParentStart="true"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnUno"
+            android:layout_toEndOf="@+id/btnTres"
             android:onClick="clickear"
-            android:tag="20"
+            android:tag="13"
             android:text="9" />
 
         <Button
             android:id="@+id/btnDiez"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnCinco"
-            android:layout_toEndOf="@+id/btnUno"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnUno"
+            android:layout_toEndOf="@+id/btnCuatro"
             android:onClick="clickear"
-            android:tag="21"
+            android:tag="14"
             android:text="10" />
 
         <Button
             android:id="@+id/btnOnce"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnCinco"
-            android:layout_toEndOf="@+id/btnDos"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnSeis"
+            android:layout_alignParentStart="true"
             android:onClick="clickear"
-            android:tag="22"
+            android:tag="20"
             android:text="11" />
 
         <Button
             android:id="@+id/btnDoce"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnCinco"
-            android:layout_toEndOf="@+id/btnTres"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnSeis"
+            android:layout_toEndOf="@+id/btnUno"
             android:onClick="clickear"
-            android:tag="23"
+            android:tag="21"
             android:text="12" />
 
         <Button
             android:id="@+id/btnTrece"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnNueve"
-            android:layout_alignParentStart="true"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnSeis"
+            android:layout_toEndOf="@+id/btnDos"
             android:onClick="clickear"
-            android:tag="30"
+            android:tag="22"
             android:text="13" />
 
         <Button
             android:id="@+id/btnCatorce"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnNueve"
-            android:layout_toEndOf="@+id/btnUno"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnSeis"
+            android:layout_toEndOf="@+id/btnTres"
             android:onClick="clickear"
-            android:tag="31"
+            android:tag="23"
             android:text="14" />
 
         <Button
             android:id="@+id/btnQuince"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnNueve"
-            android:layout_toEndOf="@+id/btnDos"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnSeis"
+            android:layout_toEndOf="@+id/btnCuatro"
             android:onClick="clickear"
-            android:tag="32"
+            android:tag="24"
             android:text="15" />
 
         <Button
             android:id="@+id/btnDieciseis"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnNueve"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnOnce"
+            android:layout_alignParentStart="true"
+            android:onClick="clickear"
+            android:tag="30"
+            android:text="16" />
+
+        <Button
+            android:id="@+id/btnDiecisiete"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnOnce"
+            android:layout_toEndOf="@+id/btnUno"
+            android:onClick="clickear"
+            android:tag="31"
+            android:text="17" />
+
+        <Button
+            android:id="@+id/btnDieciocho"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnOnce"
+            android:layout_toEndOf="@+id/btnDos"
+            android:onClick="clickear"
+            android:tag="32"
+            android:text="18" />
+
+        <Button
+            android:id="@+id/btnDiecinueve"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnOnce"
             android:layout_toEndOf="@+id/btnTres"
-            android:background="@color/colorBtnLibre"
             android:onClick="clickear"
             android:tag="33"
-            android:text="16" />
+            android:text="19" />
+
+        <Button
+            android:id="@+id/btnVeinte"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnOnce"
+            android:layout_toEndOf="@+id/btnCuatro"
+            android:onClick="clickear"
+            android:tag="34"
+            android:text="20" />
+
+        <Button
+            android:id="@+id/btnVeintiuno"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnDieciseis"
+            android:layout_alignParentStart="true"
+            android:onClick="clickear"
+            android:tag="40"
+            android:text="21" />
+
+        <Button
+            android:id="@+id/btnVeintidos"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnDieciseis"
+            android:layout_toEndOf="@+id/btnUno"
+            android:onClick="clickear"
+            android:tag="41"
+            android:text="22" />
+
+        <Button
+            android:id="@+id/btnVeintitres"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnDieciseis"
+            android:layout_toEndOf="@+id/btnDos"
+            android:onClick="clickear"
+            android:tag="42"
+            android:text="23" />
+
+        <Button
+            android:id="@+id/btnVeinticuatro"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnDieciseis"
+            android:layout_toEndOf="@+id/btnTres"
+            android:onClick="clickear"
+            android:tag="43"
+            android:text="24" />
+
+        <Button
+            android:id="@+id/btnVeinticinco"
+            style="@style/ButtonStyle3"
+            android:layout_below="@+id/btnDieciseis"
+            android:layout_toEndOf="@+id/btnCuatro"
+            android:background="@color/colorBtnLibre"
+            android:onClick="clickear"
+            android:tag="44"
+            android:text="25" />
 
     </RelativeLayout>
 

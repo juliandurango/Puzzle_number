@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SegundoNivel">
+    tools:context=".PrimerNivel">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,9 +17,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:fontFamily="@font/patua_one"
             android:gravity="center"
             android:text="Movimientos: 0"
-            android:fontFamily="@font/patua_one"
             android:textColor="@color/black" />
 
         <TextView
@@ -27,9 +27,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:fontFamily="@font/patua_one"
             android:gravity="center"
             android:text="Tiempo: 00:00:00"
-            android:fontFamily="@font/patua_one"
             android:textColor="@color/black" />
     </LinearLayout>
 
@@ -38,20 +38,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:background="@color/white"
         android:onClick="clickear">
 
         <Button
             android:id="@+id/btnUno"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyle1"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:backgroundTint="@color/boton"
             android:onClick="clickear"
             android:tag="00"
             android:text="1" />
 
         <Button
             android:id="@+id/btnDos"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyle1"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/btnUno"
             android:onClick="clickear"
@@ -60,7 +63,7 @@
 
         <Button
             android:id="@+id/btnTres"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyle1"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/btnDos"
             android:onClick="clickear"
@@ -69,121 +72,58 @@
 
         <Button
             android:id="@+id/btnCuatro"
-            style="@style/ButtonStyle"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@+id/btnTres"
-            android:onClick="clickear"
-            android:tag="03"
-            android:text="4" />
-
-        <Button
-            android:id="@+id/btnCinco"
-            style="@style/ButtonStyle"
+            style="@style/ButtonStyle1"
             android:layout_below="@+id/btnUno"
             android:layout_alignParentStart="true"
             android:onClick="clickear"
             android:tag="10"
-            android:text="5" />
+            android:text="4" />
 
         <Button
-            android:id="@+id/btnSeis"
-            style="@style/ButtonStyle"
+            android:id="@+id/btnCinco"
+            style="@style/ButtonStyle1"
             android:layout_below="@+id/btnUno"
             android:layout_toEndOf="@+id/btnUno"
             android:onClick="clickear"
             android:tag="11"
-            android:text="6" />
+            android:text="5" />
 
         <Button
-            android:id="@+id/btnSiete"
-            style="@style/ButtonStyle"
+            android:id="@+id/btnSeis"
+            style="@style/ButtonStyle1"
             android:layout_below="@+id/btnUno"
             android:layout_toEndOf="@+id/btnDos"
             android:onClick="clickear"
             android:tag="12"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btnSiete"
+            style="@style/ButtonStyle1"
+            android:layout_below="@+id/btnCuatro"
+            android:layout_alignParentStart="true"
+            android:onClick="clickear"
+            android:tag="20"
             android:text="7" />
 
         <Button
             android:id="@+id/btnOcho"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnUno"
-            android:layout_toEndOf="@+id/btnTres"
+            style="@style/ButtonStyle1"
+            android:layout_below="@+id/btnCuatro"
+            android:layout_toEndOf="@+id/btnUno"
             android:onClick="clickear"
-            android:tag="13"
+            android:tag="21"
             android:text="8" />
 
         <Button
             android:id="@+id/btnNueve"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnCinco"
-            android:layout_alignParentStart="true"
-            android:onClick="clickear"
-            android:tag="20"
-            android:text="9" />
-
-        <Button
-            android:id="@+id/btnDiez"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnCinco"
-            android:layout_toEndOf="@+id/btnUno"
-            android:onClick="clickear"
-            android:tag="21"
-            android:text="10" />
-
-        <Button
-            android:id="@+id/btnOnce"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnCinco"
+            style="@style/ButtonStyle1"
+            android:layout_below="@+id/btnCuatro"
             android:layout_toEndOf="@+id/btnDos"
-            android:onClick="clickear"
-            android:tag="22"
-            android:text="11" />
-
-        <Button
-            android:id="@+id/btnDoce"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnCinco"
-            android:layout_toEndOf="@+id/btnTres"
-            android:onClick="clickear"
-            android:tag="23"
-            android:text="12" />
-
-        <Button
-            android:id="@+id/btnTrece"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnNueve"
-            android:layout_alignParentStart="true"
-            android:onClick="clickear"
-            android:tag="30"
-            android:text="13" />
-
-        <Button
-            android:id="@+id/btnCatorce"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnNueve"
-            android:layout_toEndOf="@+id/btnUno"
-            android:onClick="clickear"
-            android:tag="31"
-            android:text="14" />
-
-        <Button
-            android:id="@+id/btnQuince"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnNueve"
-            android:layout_toEndOf="@+id/btnDos"
-            android:onClick="clickear"
-            android:tag="32"
-            android:text="15" />
-
-        <Button
-            android:id="@+id/btnDieciseis"
-            style="@style/ButtonStyle"
-            android:layout_below="@+id/btnNueve"
-            android:layout_toEndOf="@+id/btnTres"
             android:background="@color/colorBtnLibre"
             android:onClick="clickear"
-            android:tag="33"
-            android:text="16" />
+            android:tag="22"
+            android:text="9" />
 
     </RelativeLayout>
 
@@ -200,15 +140,15 @@
             android:layout_marginTop="565dp"
             android:layout_marginRight="100sp"
             android:layout_weight="1"
+            android:backgroundTint="@color/boton"
+            android:fontFamily="@font/patua_one"
             android:onClick="volver"
             android:paddingTop="12dp"
             android:paddingBottom="12dp"
-            android:backgroundTint="@color/boton"
-            android:fontFamily="@font/patua_one"
+            android:text="Volver"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="Volver" />
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -227,10 +167,10 @@
             android:layout_weight="1"
             android:backgroundTint="@color/boton"
             android:fontFamily="@font/patua_one"
+            android:text="Reiniciar"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="Reiniciar" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnPausar"
@@ -241,10 +181,10 @@
             android:layout_weight="1"
             android:backgroundTint="@color/boton"
             android:fontFamily="@font/patua_one"
+            android:text="Pausar"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold"
-            android:text="Pausar" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 

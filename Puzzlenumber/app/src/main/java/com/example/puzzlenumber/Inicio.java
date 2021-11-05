@@ -15,8 +15,14 @@ public class Inicio extends AppCompatActivity {
     }
 
     public void comenzarJuego(View view) {
-        Intent juego = new Intent(this, SegundoNivel.class);
+        Intent juego = new Intent(this, Nivel.class);
         startActivity(juego);
+        finish();
+    }
+
+    public void verInstrucciones(View view) {
+        Intent instruccion = new Intent(this, Instruccion.class);
+        startActivity(instruccion);
         finish();
     }
 }

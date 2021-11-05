@@ -4,21 +4,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
-import android.widget.RelativeLayout;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Toast;
-import android.widget.TextView;
-import android.os.Bundle;
 
-public class SegundoNivel extends AppCompatActivity {
+public class TercerNivel extends AppCompatActivity {
 
-    private int vacioX = 3;
-    private int vacioY = 3;
+    private int vacioX = 4;
+    private int vacioY = 4;
     private RelativeLayout group;
     private Button[][] buttons;
     private Button btnReiniciar;
@@ -34,7 +35,7 @@ public class SegundoNivel extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_segundo_nivel);
+        setContentView(R.layout.activity_tercer_nivel);
 
         cargarVistas();
         cargarNumeros();
@@ -43,11 +44,11 @@ public class SegundoNivel extends AppCompatActivity {
     }
 
     private void cargarDatos(){
-        vacioX = 3;
-        vacioY = 3;
+        vacioX = 4;
+        vacioY = 4;
         for(int i=0; i<group.getChildCount()-1; i++){
-            buttons[i/4][i%4].setText(String.valueOf(tiles[i]));
-            buttons[i/4][i%4].setBackgroundResource(android.R.drawable.btn_default);
+            buttons[i/5][i%5].setText(String.valueOf(tiles[i]));
+            buttons[i/5][i%5].setBackgroundResource(android.R.drawable.btn_default);
         }
 
         buttons[vacioX][vacioY].setText("");
@@ -55,7 +56,7 @@ public class SegundoNivel extends AppCompatActivity {
     }
 
     private void generarNumeros(){
-        int n = 15;
+        int n = 24;
         Random random = new Random();
         while(n>1){
             int numeroAle = random.nextInt(n--);
@@ -71,7 +72,7 @@ public class SegundoNivel extends AppCompatActivity {
 
     private boolean isSolvable(){
         int cont = 0;
-        for(int i=0; i<15; i++){
+        for(int i=0; i<24; i++){
             for(int j=0; j<i; j++){
                 if(tiles[j]>tiles[i]){
                     cont++;
@@ -82,7 +83,7 @@ public class SegundoNivel extends AppCompatActivity {
     }
 
     private void cargarNumeros(){
-        tiles = new int[16];
+        tiles = new int[25];
         for(int i=0; i<group.getChildCount()-1; i++){
             tiles[i] = i + 1;
         }
@@ -115,10 +116,10 @@ public class SegundoNivel extends AppCompatActivity {
         btnPausar = findViewById(R.id.btnPausar);
 
         temporizador();
-        buttons = new Button[4][4];
+        buttons = new Button[5][5];
 
         for(int i=0; i<group.getChildCount(); i++){
-            buttons[i/4][i%4] = (Button) group.getChildAt(i);
+            buttons[i/5][i%5] = (Button) group.getChildAt(i);
         }
 
         btnReiniciar.setOnClickListener(new View.OnClickListener(){
@@ -135,13 +136,13 @@ public class SegundoNivel extends AppCompatActivity {
                     btnPausar.setText("Pausado");
                     isTimeRunning = false;
                     for(int i=0; i<group.getChildCount(); i++){
-                        buttons[i/4][i%4].setClickable(false);
+                        buttons[i/5][i%5].setClickable(false);
                     }
                 }else{
                     temporizador();
                     btnPausar.setText("Pausar");
                     for(int i=0; i<group.getChildCount(); i++){
-                        buttons[i/4][i%4].setClickable(true);
+                        buttons[i/5][i%5].setClickable(true);
                     }
                 }
             }
@@ -168,9 +169,9 @@ public class SegundoNivel extends AppCompatActivity {
 
     private void verificar(){
         boolean isWin = false;
-        if(vacioX == 3 && vacioY == 3){
+        if(vacioX == 4 && vacioY == 4){
             for(int i=0; i<group.getChildCount()-1; i++){
-                if(buttons[i/4][i%4].getText().toString().equals(String.valueOf(i+1))){
+                if(buttons[i/5][i%5].getText().toString().equals(String.valueOf(i+1))){
                     isWin=true;
                 }else{
                     isWin=false;
@@ -182,7 +183,7 @@ public class SegundoNivel extends AppCompatActivity {
         if(isWin){
             Toast.makeText(this, "Has ganado", Toast.LENGTH_SHORT).show();
             for(int i=0; i<group.getChildCount(); i++){
-                buttons[i/4][i%4].setClickable(false);
+                buttons[i/5][i%5].setClickable(false);
             }
             timer.cancel();
             btnReiniciar.setClickable(false);

@@ -4,25 +4,121 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Instruccion">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:layout_marginVertical="1dp"
+        android:scrollIndicators="top|bottom">
 
-        <TextView
-            android:id="@+id/textView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                app:srcCompat="@drawable/instrucciones" />
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/patua_one"
+                android:text="1. Indique el nivel que desea jugar (entre más grande sea la pantalla, más difícil será el juego) ."
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                android:fontFamily="@font/patua_one"
+                android:text="2. Comience a jugar haciendo que los números queden en orden del 1 hasta el número más grande que se encuentre en el nivel. Debe mover lo cuadros teniendo en cuenta el espacio en blanco que se encuentra en el, de acuerdo en la posición inicial que estén. "
+                android:textColor="@color/boton"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                android:fontFamily="@font/patua_one"
+                android:text="3. Los bloques sólo se pueden mover de forma horizontal o vertical según donde se encuentre el único espacio del cuadro. No se pueden mover de forma diagonal o saltarse cuadros. "
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                android:fontFamily="@font/patua_one"
+                android:text="4. No existe límite de movimiento o tiempo en este juego, se trata de pensar y analizar las múltiples opciones que tiene el juego de mover los bloques. "
+                android:textColor="@color/boton"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                android:fontFamily="@font/patua_one"
+                android:text="5. En la parte inferior puedes encontrar el botón de reiniciar para comenzar de nuevo el juego. "
+                android:textColor="@color/black"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                android:fontFamily="@font/patua_one"
+                android:text="6. El botón de pausar y de volver a inicio para cambiar el nivel del juego. "
+                android:textColor="@color/boton"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="5dp"
+                android:fontFamily="@font/patua_one"
+                android:gravity="center"
+                android:text="Pon tus habilidades de agilidad y pensamiento a la hora de planear tu jugada. ¡Juega y diviértete! "
+                android:textColor="@color/black"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnVolver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="70dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/boton"
+                android:fontFamily="@font/patua_one"
+                android:onClick="volver"
+                android:text="Volver"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

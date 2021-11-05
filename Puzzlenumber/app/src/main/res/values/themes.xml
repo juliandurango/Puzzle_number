@@ -15,9 +15,41 @@
     </style>
 
     <style name="ButtonStyle">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:onClick">btnClick</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:background">#2F5597</item>
+        <item name="android:backgroundTint">#2F5597</item>
+        <item name="android:fontFamily">@font/patua_one</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="ButtonStyle1">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:onClick">btnClick</item>
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:background">#2F5597</item>
+        <item name="android:backgroundTint">#2F5597</item>
+        <item name="android:fontFamily">@font/patua_one</item>
+        <item name="android:textSize">34sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="ButtonStyle3">
         <item name="android:layout_width">60dp</item>
         <item name="android:layout_height">60dp</item>
         <item name="android:onClick">btnClick</item>
-        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:background">#2F5597</item>
+        <item name="android:backgroundTint">#2F5597</item>
+        <item name="android:fontFamily">@font/patua_one</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 </resources>
